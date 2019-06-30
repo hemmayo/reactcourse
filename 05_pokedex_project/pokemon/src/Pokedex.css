@@ -1,0 +1,20 @@
+.Pokedex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* width: 80%; */
+}
+
+.Pokedex .Pokedex__title {
+    /* font-size: larger; */
+}
+
+.Pokedex .Pokedex__cards {
+    display: flex;
+    justify-content: center;
+}
+
+.Pokedex .Pokedex__cards > *:not(:last-child) {
+    margin-right: 1rem;
+}
