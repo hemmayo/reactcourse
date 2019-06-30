@@ -4,15 +4,25 @@
     justify-content: space-around;
     flex-wrap: wrap;
     /* width: 80%; */
+    margin-bottom: 1rem;
 }
 
 .Pokedex .Pokedex__title {
-    /* font-size: larger; */
+    font-size: larger;
 }
 
 .Pokedex .Pokedex__cards {
     display: flex;
     justify-content: center;
+}
+
+.Pokedex .Pokedex__details--winner {
+    color: green;
+    font-weight: bold;
+}
+
+.Pokedex .Pokedex__details--loser {
+    color: palevioletred;
 }
 
 .Pokedex .Pokedex__cards > *:not(:last-child) {
