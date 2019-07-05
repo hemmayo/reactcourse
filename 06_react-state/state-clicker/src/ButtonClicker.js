@@ -15,7 +15,7 @@ export default class ButtonClicker extends Component {
         return (
             <div>
                 <h1>Your number is { this.state.num }</h1>
-                {this.state.num === 7 ? 'You win!!!' : <button onClick={this.handleClick}>Click here</button>}
+                {this.state.num === 7 ? <h2>You win!!!</h2> : <button onClick={this.handleClick}>Click here</button>}
             </div>
         )
     }
