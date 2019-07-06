@@ -8,7 +8,7 @@ function App() {
       <h2>Roll the Dice</h2>
       <Rolldice 
         noOfDice={2}
-        faces={['one', 'two', 'three', 'four']} 
+        faces={['one', 'two', 'three', 'four', 'five', 'six']} 
         />
     </div>
   );
