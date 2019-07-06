@@ -1,0 +1,14 @@
+.Ball {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    background-color: rgb(241, 65, 11);
+    color: #eee;
+    border-radius: 100rem;
+    font-size: larger;
+    font-weight: bold;
+    border: 3px solid currentColor;
+}

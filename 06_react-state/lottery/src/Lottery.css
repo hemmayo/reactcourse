@@ -1,0 +1,45 @@
+.Lottery {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px dashed currentColor;
+    border-top-style: solid;
+    border-top-width: 5px;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 4px;
+}
+
+.Lottery:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.Lottery .balls {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Lottery .balls :not(:last-child) {
+    margin-right: 1rem;
+}
+
+.Lottery .title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.Lottery .button {
+    appearance: none;
+    outline: none;
+    min-width: 10rem;
+    border: 2px dashed currentColor;
+    padding: 1rem 5rem;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'TT Commons', sans-serif;
+}
