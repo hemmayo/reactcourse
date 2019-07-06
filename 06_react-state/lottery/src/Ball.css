@@ -12,3 +12,17 @@
     font-weight: bold;
     border: 3px solid currentColor;
 }
+
+.Ball:hover {
+    animation: rotate 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+    perspective: 100px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}

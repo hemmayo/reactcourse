@@ -4,7 +4,8 @@ import './Lottery.css'
 
 export default class Lottery extends Component {
     state = {
-        nums: Array.from({length: this.props.noOfBalls})
+        nums: Array.from({length: this.props.noOfBalls}),
+        generating: false
     }
 
     static defaultProps = {
@@ -14,18 +15,20 @@ export default class Lottery extends Component {
     }
 
     generateNums() {
-        this.setState(curState => ({
-            nums: [...curState.nums.map(num => Math.floor(Math.random() * this.props.maxNum))]
-        }));
+        this.setState(curState => ({ generating: true }));
+        setTimeout(() => this.setState(curState => ({
+            nums: [...curState.nums.map(num => Math.floor(Math.random() * this.props.maxNum))],
+            generating: false
+        })), 1000);
     }
 
     render() {
         return (
             <div className='Lottery'>
                 <h1 className="title">{this.props.title}</h1>
-                <div className="balls">
+                <div className={`balls ${this.state.generating ? 'animated' : ''}`}>
                     {
-                        this.state.nums.map(num => <Ball num={num} />)
+                        this.state.nums.map((num, i) => <Ball key={i} num={num} />)
                     }
                 </div>
                 <button className="button" onClick={() => this.generateNums()}>Generate</button>
