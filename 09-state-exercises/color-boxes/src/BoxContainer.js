@@ -7,7 +7,7 @@ export default class BoxContainer extends Component {
         boxes: Array.from({length: this.props.noBoxes})
     }
     static defaultProps = {
-        noBoxes: 16
+        noBoxes: 1600
     }
     render() {
         return (
