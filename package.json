@@ -1,0 +1,9 @@
+{
+  "name": "reactcourse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hemmayo/reactcourse.git",
+  "author": "Emmanuel Popoola <olaayo10@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
