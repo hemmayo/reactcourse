@@ -1,34 +1,26 @@
 import React, { Component } from 'react'
-import { choose } from './helpers'
 import './Box.css'
 
 export default class Box extends Component {
-    state = {
-        color: null
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            color: null
+        }
+        this.handleClick = this.handleClick.bind(this)
     }
-    static defaultProps = {
-        colors: ['purple', 'magenta', 'royalblue', 'darkslateblue', 'peru']
+
+    handleClick(e) {
+        this.props.pick(this.props.id)
     }
-    componentDidMount() {
-        this.setState({ color: choose(this.props.colors) })
-    }
-    pickColor() {
-        this.setState(st => {
-            let color;
-            do {
-                color = choose(this.props.colors)
-            }
-            while ( this.state.color === color);
-            return {color}
-        })
-    }
+    
     render() {
         return (
             <div 
                 className="Box" 
-                onClick={() => this.pickColor()} 
-                style={{backgroundColor: this.state.color}}>
-                
+                onClick={this.handleClick} 
+                style={{backgroundColor: this.props.color}}>
             </div>
         )
     }
