@@ -14,7 +14,7 @@ export default class BoxContainer extends Component {
     }
 
     static defaultProps = {
-        noBoxes: 160000,
+        noBoxes: 160,
         colors: ['purple', 'magenta', 'royalblue', 'darkslateblue', 'peru']
     }
     pickColor(i) {
